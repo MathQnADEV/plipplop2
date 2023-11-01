@@ -1,3 +1,5 @@
+//sapa seperti next.config.js ini tempat configurasi
+// cssnya jadi yah gitu deh
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
