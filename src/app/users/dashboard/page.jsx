@@ -8,7 +8,7 @@ const page = async () => {
   const user = await authUserSession();
 
   const checkUser = await getDataCheckUser(user.email);
-  console.log(checkUser);
+  // console.log(checkUser);
 
   // checkUser.data.success
 

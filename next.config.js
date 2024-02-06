@@ -14,7 +14,7 @@ const nextConfig = {
         hostname: "lh3.googleusercontent.com",
       },
       {
-        hostname: "127.0.0.1",
+        hostname: "admin.plipplop.site",
       },
     ],
   },
