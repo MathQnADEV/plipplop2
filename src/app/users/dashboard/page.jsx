@@ -31,11 +31,3 @@ const page = async () => {
 };
 
 export default page;
-
-/* {user ? (
-  <Profile data={user} />
-) : (
-  <div>
-    <h1>LOGIN BANG</h1>
-  </div>
-)} */
