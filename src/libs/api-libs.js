@@ -17,13 +17,8 @@ export const getFanartResponse = async (resource) => {
 };
 
 export const getNestedAnimeResponse = async (resource, objectProperty) => {
-  try {
     const response = await getAnimeResponse(resource);
     return response.data.flatMap((item) => item[objectProperty]);
-  } catch (error) {
-    // Ulangi get data
-    return getNestedAnimeResponse(resource, objectProperty);
-  }
 };
 
 // randomize data
@@ -46,21 +41,13 @@ export const getMangaResponse = async (resource, query) => {
 };
 
 export const getNestedMangaResponse = async (resource, objectProperty) => {
-  try {
     const response = await getMangaResponse(resource);
     return await response.data.flatMap((item) => item[objectProperty]);
-  } catch (error) {
-    return getNestedMangaResponse(resource, objectProperty);
-  }
 };
 
 export const getDataCheckUser = async (data) => {
-  try {
     const response = await axios.post("/userPlipPlopCheck", {
       email: data,
     });
     return await response.data.data;
-  } catch (error) {
-    return null;
-  }
 };
