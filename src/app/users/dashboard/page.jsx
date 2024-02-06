@@ -1,9 +1,8 @@
 import NewProfile from "@/components/UserProfile/NewProfile";
-import Profile from "@/components/UserProfile/profile";
+import Profile from "@/components/UserProfile/Profile";
 import { poppins } from "@/components/Utilities/font";
 import { getDataCheckUser } from "@/libs/api-libs";
 import { authUserSession } from "@/libs/auth-libs";
-import axios from "@/libs/axios";
 
 const page = async () => {
   const user = await authUserSession();
