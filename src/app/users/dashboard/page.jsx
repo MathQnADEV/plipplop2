@@ -1,20 +1,29 @@
+import NewProfile from "@/components/UserProfile/NewProfile";
+import Profile from "@/components/UserProfile/profile";
+import { poppins } from "@/components/Utilities/font";
+import { getDataCheckUser } from "@/libs/api-libs";
 import { authUserSession } from "@/libs/auth-libs";
-import Image from "next/image";
+import axios from "@/libs/axios";
 
 const page = async () => {
   const user = await authUserSession();
 
+  const checkUser = await getDataCheckUser(user.email);
+  console.log(checkUser);
+
+  // checkUser.data.success
+
   return (
-    <div className="text-color-primary">
-      {user ? (
-        <div>
-          <h3>DASHBOARD</h3>
-          <h5>Welkom, {user.name}</h5>
-          <Image src={user.image} alt="..." width={250} height={250} />
-        </div>
+    <div
+      className={`${poppins.className} relative bg-[url('/PPbgWhite.png')] bg-cover bg-fixed bg-center`}
+    >
+      {checkUser && user ? (
+        <NewProfile data={checkUser} />
+      ) : user ? (
+        <Profile data={user} />
       ) : (
         <div>
-          <h1>LOGIN NGENTOT</h1>
+          <h1>LOGIN BANG</h1>
         </div>
       )}
     </div>
@@ -22,3 +31,11 @@ const page = async () => {
 };
 
 export default page;
+
+/* {user ? (
+  <Profile data={user} />
+) : (
+  <div>
+    <h1>LOGIN BANG</h1>
+  </div>
+)} */

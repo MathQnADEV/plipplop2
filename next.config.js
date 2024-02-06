@@ -2,6 +2,7 @@
 // bisa di file ini
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
     remotePatterns: [
       {
@@ -10,8 +11,14 @@ const nextConfig = {
       {
         hostname: "avatars.githubusercontent.com",
       },
+      {
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        hostname: "127.0.0.1",
+      },
     ],
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

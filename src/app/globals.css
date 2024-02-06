@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-img {
+/* img {
   transition: 0.3s ease all;
   -webkit-transition: 0.3s ease all;
   -moz-transition: 0.3s ease all;
@@ -20,7 +20,7 @@ img {
 
 img:hover {
   scale: 102%;
-}
+} */
 
 .loading {
   width: 100px;

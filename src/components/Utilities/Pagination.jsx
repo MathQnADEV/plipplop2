@@ -17,11 +17,11 @@ const Pagination = ({ page, lastPage, setPage }) => {
   };
 
   return (
-    <div className="flex justify-center items-center py-4 px-2 gap-4 text-color-primary text-2xl">
+    <div className="flex justify-center items-center py-4 px-2 gap-4 text-dark text-2xl">
       {page <= 1 ? null : (
         <button
           onClick={handlePrevPage}
-          className="transition-all hover:text-color-accent"
+          className="transition-all hover:text-[#ffc639]"
         >
           Prev
         </button>
@@ -32,7 +32,7 @@ const Pagination = ({ page, lastPage, setPage }) => {
       {page >= lastPage ? null : (
         <button
           onClick={handleNextPage}
-          className="transition-all hover:text-color-accent"
+          className="transition-all hover:text-[#ffc639]"
         >
           Next
         </button>

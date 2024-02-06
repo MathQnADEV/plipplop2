@@ -19,7 +19,7 @@ const VideoPlayer = ({ youtubeID }) => {
       <div className="fixed bottom-2 right-2">
         <button
           onClick={handleVideoPlayer}
-          className="text-color-primary float-right bg-color-secondary px-3 mb-1 rounded"
+          className="text-[##ffc639] float-right bg-[#393e46] px-3 mb-1 rounded"
         >
           X
         </button>
@@ -37,7 +37,7 @@ const VideoPlayer = ({ youtubeID }) => {
     return (
       <button
         onClick={handleVideoPlayer}
-        className="fixed bottom-5 right-5 w-32 p-1 bg-color-primary text-color-dark rounded text-xl hover:bg-color-accent transition-all shadow-xl"
+        className="fixed bottom-5 right-5 w-32 p-1 bg-white text-[#222831] rounded text-xl hover:bg-[#ffc639] transition-all shadow-xl"
       >
         Tonton Trailer
       </button>

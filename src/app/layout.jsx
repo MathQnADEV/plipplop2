@@ -1,21 +1,21 @@
-import { Gabarito } from 'next/font/google'
-import '@/app/globals.css'
-import Navbar from '@/components/Navbar'
-
-const gabarito = Gabarito({ subsets: ['latin'] })
+import "@/app/globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { poppins } from "@/components/Utilities/font";
 
 export const metadata = {
-  title: 'AnimeListGacor',
-  description: 'Indonesian Anime Website Gacor',
-}
+  title: "PlipPlop",
+  description: "World Wide Wibu Community",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gabarito.className} bg-color-dark`} suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true} className={`${poppins.className}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
