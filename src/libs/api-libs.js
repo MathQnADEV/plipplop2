@@ -18,7 +18,7 @@ export const getFanartResponse = async (resource) => {
 
 export const getNestedAnimeResponse = async (resource, objectProperty) => {
     const response = await getAnimeResponse(resource);
-    return response.data.flatMap((item) => item[objectProperty]);
+    return response.data.flatMap(item => item[objectProperty]);
 };
 
 // randomize data
@@ -42,7 +42,7 @@ export const getMangaResponse = async (resource, query) => {
 
 export const getNestedMangaResponse = async (resource, objectProperty) => {
     const response = await getMangaResponse(resource);
-    return await response.data.flatMap((item) => item[objectProperty]);
+    return await response.data.flatMap(item => item[objectProperty]);
 };
 
 export const getDataCheckUser = async (data) => {
